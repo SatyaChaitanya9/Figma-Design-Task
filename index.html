@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Boxes - BOGO</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main class="page">
+        <section class="container" aria-label="BOGO offers">
+            <header class="heading">
+                <div class="line left" aria-hidden="true"></div>
+                <h2>YAY! It's BOGO</h2>
+                <div class="line right" aria-hidden="true"></div>
+            </header>
+            <div class="card-group" role="list">
+                <!-- Card 1 -->
+                <article class="card" id="card1" role="listitem" tabindex="0" aria-expanded="false">
+                    <div class="card-header">
+                        <input type="radio" name="plan" checked class="radio-button">
+                        <span class="units">1 Unit</span>
+                        <span class="discount">10% Off</span>
+                        <span class="discounted-price">$10.00 USD</span>
+                    </div>
+
+                    <div class="price">
+                        <span class="standard-price">Standard Price</span>
+                        <span class="original-price">$24.00 USD</span>
+                    </div>                   
+
+                    <div class="expandable">
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>Size</th>
+                                <th>Colour</th>
+                            </tr>
+                            <tr>
+                                <td class="sno">#1</td>
+                                <td>
+                                    <select>
+                                        <option>S</option>
+                                        <option>M</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option>Black</option>
+                                        <option>red</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="sno">#2</td>
+                                <td>
+                                    <select>
+                                        <option>S</option>
+                                        <option>M</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select>
+                                        <option>Black</option>
+                                        <option>red</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card" id="card2">
+                <div class="most-popular">MOST POPULAR</div>
+                <div class="card-header">
+                    <input type="radio" name="plan" class="radio-button">
+                    <span class="units">2 Unit</span>
+                    <span class="discount">20% Off</span>
+                    <span class="discounted-price">$18.00 USD</span>
+                </div>
+                <div class="original-price">$24.00 USD</div>
+
+                <div class="expandable">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Size</th>
+                            <th>Colour</th>
+
+                        </tr>
+                        <tr>
+                            <td class="sno">#1</td>
+                            <td>
+                                <select>
+                                    <option>S</option>
+                                    <option>M</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select>
+                                    <option>Black</option>
+                                    <option>red</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sno">#2</td>
+                            <td>
+                                <select>
+                                    <option>S</option>
+                                    <option>M</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select>
+                                    <option>Black</option>
+                                    <option>red</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card" id="card3">
+                <div class="card-header">
+                    <input type="radio" name="plan" class="radio-button">
+                    <span class="units">3 Unit</span>
+                    <span class="discount">30% Off</span>
+                    <span class="discounted-price">$24.00 USD</span>
+                </div>
+                <div class="original-price">$24.00 USD</div>
+
+                <div class="expandable">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Size</th>
+                            <th>Colour</th>
+
+                        </tr>
+                        <tr>
+                            <td class="sno">#1</td>
+                            <td>
+                                <select>
+                                    <option>S</option>
+                                    <option>M</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select>
+                                    <option>Black</option>
+                                    <option>red</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sno">#2</td>
+                            <td>
+                                <select>
+                                    <option>S</option>
+                                    <option>M</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select>
+                                    <option>Black</option>
+                                    <option>red</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- end-part -->
+             <div class="footer">
+                <span class="delivery">Free Delivery</span>
+                <span class="total">Total : $18.00 USD</span>
+            </div>
+
+            <div class="cart-row">
+                <button class="add-btn"><i class="fa-solid fa-plus"></i> &nbsp; Add to Cart</button>
+                <div class="powered">@ Powered by Pumper</div>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- *************************************************************************************************   -->
+    

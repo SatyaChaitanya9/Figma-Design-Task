@@ -1,0 +1,615 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.container {
+  padding: 24px;
+  border-radius: 0px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+
+  height: 24px;
+}
+
+.line {
+  border-top: 0.9px solid #C8C8C8;
+}
+
+.line.left { width: 91.65px; }
+.line.right { width: 96.63px; }
+
+h2 {
+  color: #FF6B82;
+  font-size: 20px;
+  font-weight: 600;
+
+  line-height: 100%;
+}
+
+
+
+.card {
+  border: 0.9px solid #C8C8C8;
+  border-radius: 0px;
+  margin-bottom: 24px;
+  position: relative;
+  padding: 20px 16px;
+  cursor: pointer;
+}
+
+
+.radio-button{
+  color: #DADADA;
+  cursor: pointer;
+}
+
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.units{
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  margin-top: 3px;
+}
+
+.card:hover, .card.active {
+  border: 2px solid #FF6B82;
+  background-color: #FFF6F8;
+}
+
+.discount {
+  background: #FF6B82;
+  color: white;
+  border-radius: 0px;
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-left: 8px;
+
+  font-weight: 400;
+  margin-top: 3px;
+}
+
+.discounted-price{
+  margin-left: 92px;
+  font-weight: 600;
+  font-size: 14.46px;
+  margin-top: 3px;
+}
+
+.standard-price{
+  font-weight: 400;
+  font-size: 12px;
+  margin-left: 24px;
+}
+
+.original-price{
+  font-weight: 400;
+  font-size: 10px;
+  color: #C8C8C8;
+  text-decoration: line-through;
+  text-align: right;
+}
+
+.most-popular {
+  background: #FF6B82;
+  color: white;
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 0 0 4px 4px;
+  position: absolute;
+  right: 4px;
+  top: -10px;
+
+  font-weight: 700;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 8px;
+
+}
+
+.delivery {
+  color: #FF6B82;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.total{
+  height: 17px;
+  font-weight: 600;
+  font-size: 14px;
+
+}
+
+.add-btn {
+  background: #FF6B82;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.powered {
+  font-size: 12px;
+  text-align: right;
+  color: #888;
+  margin-top: 6px;
+  font-weight: 400;
+  font-style: italic;
+
+  height: 15px;
+}
+
+.expandable {
+  display: none;
+  margin-top: 10px;
+  padding: 8px 0;
+}
+
+.expandable table {
+  border-collapse: collapse;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 24px;
+}
+
+.expandable th {
+  font-weight: 400;
+  font-size: 9.94px;
+  color: #333;
+  text-align: left;
+  padding: 4px;
+}
+
+.expandable td {
+  padding: 4px;
+  font-size: 10.85px;
+}
+
+.expandable select {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 10.85px;
+  width: 70px;
+}
+
+.expandable option{
+  font-size: 10.85px;
+  font-weight: 400;
+}
+
+.expandable .sno{
+  font-size: 9.04px;
+  font-weight: 400;
+}
+
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.card.active .expandable {
+  display: block;
+}
+
+.expandable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.1s ease;
+}
+
+.card.active .expandable {
+  max-height: 300px;
+}
+
+
+
+
+
+/* Hide the default browser radio */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 14px; /* Slightly larger than 9px to accommodate border visually */
+  height: 14px;
+  border: 1.5px solid #FF6B82;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+}
+
+/* Inner filled circle when checked */
+input[type="radio"]:checked::before {
+  content: "";
+  width: 7px; /* proportional inner size */
+  height: 7px;
+  background-color: #FF6B82;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Subtle hover effect */
+input[type="radio"]:hover {
+  box-shadow: 0 0 0 2px rgba(255, 107, 130, 0.2);
+}
+
+
+/* ************************** responsiveness ***************************** */
+
+@media (min-width: 425px) and (max-width: 767px) {
+  h2 {
+    font-size: 13px;
+  }
+  
+  .units{
+  font-size: 10px;
+}
+.line.left { width: 84px; }
+.line.right { width: 84px; }
+
+
+.discount {
+  padding: 2px 4px;
+  font-size: 10px;
+  margin-left: 6px;
+}
+
+.discounted-price{
+  margin-left: 70px;
+  font-size: 12px;
+}
+
+.standard-price{
+  font-weight: 400;
+  font-size: 10px;
+  margin-left: 10px;
+}
+
+.original-price{
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.most-popular {
+  font-size: 10px;
+  padding: 3px 6px;
+  border-radius: 0 0 4px 4px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.delivery {
+  font-size: 12px;
+}
+
+.total{
+  font-size: 12px;
+}
+
+.add-btn {
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.powered {
+  font-size: 11px;
+}
+
+.expandable {
+  display: none;
+  margin-top: 10px;
+  padding: 6px 0;
+}
+
+.expandable table {
+  margin: 0px 16px;
+}
+
+.expandable th {
+  font-size: 9px;
+}
+
+.expandable td {
+  padding: 4px;
+  font-size: 10px;
+}
+
+.expandable select {
+  padding: 3px 6px;
+  font-size: 9px;
+  width: 60px;
+}
+
+.expandable option{
+  font-size: 9px;
+}
+
+.expandable .sno{
+  font-size: 8px;
+}
+
+/* Hide the default browser radio */
+input[type="radio"] {
+  width: 10px;
+  height: 10px;
+}
+
+/* Inner filled circle when checked */
+input[type="radio"]:checked::before {
+  width: 5px;
+  height: 5px;
+}
+
+}
+
+
+@media (min-width: 375px) and (max-width: 424px) {
+  h2 {
+    font-size: 12px;
+  }
+  
+  .units{
+  font-size: 8px;
+  margin-top: 6px;
+}
+.line.left { width: 60px; }
+.line.right { width: 60px; }
+
+
+.discount {
+  padding: 1.5px 3px;
+  font-size: 8px;
+  margin-left: 6px;
+  margin-top: 4px;
+}
+
+.discounted-price{
+  margin-left: 50px;
+  font-size: 10px;
+}
+
+.standard-price{
+  font-size: 8px;
+  margin-left: 16px;
+}
+
+.original-price{
+  font-weight: 400;
+  font-size: 8px;
+}
+
+.most-popular {
+  font-size: 10px;
+  padding: 3px 6px;
+  border-radius: 0 0 4px 4px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  margin-top: 8px;
+}
+
+.delivery {
+  font-size: 10px;
+}
+
+.total{
+  font-size: 10px;
+}
+
+.add-btn {
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.powered {
+  font-size: 10px;
+}
+
+.expandable {
+  display: none;
+  margin-top: 10px;
+  padding: 6px 0;
+}
+
+.expandable table {
+  margin: 0px 10px;
+}
+
+.expandable th {
+  font-size: 8px;
+}
+
+.expandable td {
+  padding: 4px;
+  font-size: 9px;
+}
+
+.expandable select {
+  padding: 2px 4px;
+  font-size: 8px;
+  width: 50px;
+}
+
+.expandable option{
+  font-size: 8px;
+}
+
+.expandable .sno{
+  font-size: 8px;
+}
+
+/* Hide the default browser radio */
+input[type="radio"] {
+  width: 8px;
+  height: 8px;
+}
+
+/* Inner filled circle when checked */
+input[type="radio"]:checked::before {
+  width: 4px;
+  height: 4px;
+}
+
+}
+
+
+@media (max-width: 374px) {
+  h2 {
+    font-size: 10px;
+  }
+  
+  .units{
+  font-size: 7px;
+  margin-top: 3px;
+ }
+.line.left { width: 40px; }
+.line.right { width: 40px; }
+
+
+.discount {
+  padding: 1px 2px;
+  font-size: 7px;
+  margin-left: 4px;
+  margin-top: 2px;
+}
+
+.discounted-price{
+  margin-left: 25px;
+  font-size: 8px;
+}
+
+.standard-price{
+  font-size: 7px;
+  margin-left: 16px;
+}
+
+.original-price{
+  font-weight: 400;
+  font-size: 7px;
+}
+
+.most-popular {
+  font-size: 7px;
+  padding: 6px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  margin-top: 8px;
+}
+
+.delivery {
+  font-size: 9px;
+}
+
+.total{
+  font-size: 9px;
+}
+
+.add-btn {
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 10px;
+}
+
+.powered {
+  font-size: 9px;
+}
+
+.expandable {
+  display: none;
+  margin-top: 10px;
+  padding: 6px 0;
+}
+
+.expandable table {
+  margin: 0px 12px;
+}
+
+.expandable th {
+  font-size: 7px;
+}
+
+.expandable td {
+  padding: 3px;
+  font-size: 7px;
+}
+
+.expandable select {
+  padding: 1px 2px;
+  font-size: 6px;
+  width: 42px;
+}
+
+.expandable option{
+  font-size: 6px;
+}
+
+.expandable .sno{
+  font-size: 7px;
+}
+
+/* Hide the default browser radio */
+input[type="radio"] {
+  width: 8px;
+  height: 8px;
+}
+
+/* Inner filled circle when checked */
+input[type="radio"]:checked::before {
+  width: 4px;
+  height: 4px;
+}
+
+}
